@@ -69,11 +69,11 @@ function shuffle(deck) {
 // //   function compareCards() {
 // //     let cardsInPlay = player1.deck.shift()
 // //   }
-  var fruits = {
-      citrus: [{orange:
-    "tasty"}, "Lime", "Lemon"] 
-  }
- let orange = fruits.citrus.shift();
+//   var fruits = {
+//       citrus: [{orange:
+//     "tasty"}, "Lime", "Lemon"] 
+//   }
+//  let orange = fruits.citrus.shift();
 
 
 
@@ -89,14 +89,24 @@ number2 = {
   value : 2,
   array : ["string two"]
 }
+shuffle(deck); 
+splitDeck(deck); 
 
+
+//  let player1Card = player1.deck.shift()
+
+// let player2Card = player2.deck.shift()
+
+// cardsInPlay = [player1Card, player2Card]
 
 
     //if player 1 card value is higher than the player 2 card value, player  1 wins
-    if (player1Card.value > player2Card.value) {
+    if (player1.deck[0].value > player2.deck[0].value) {
       //player1 keeps their card player2 loses their card and both cards go to the bottom of winning player deck (shuffle?) 
-      cardsInPlay.pop();
-      player1.deck.push(cardsInPlay);
+      let loseCard = player1.deck.push(player2.deck[0]);// <this is putting the entire deck inside player 1s deck
+      console.log(player1.deck)
+      // player1.deck.push(cardsInPlay);
+      // console.log(player1.deck)
       //^ this will cause problems because its putting an array inside an array 
       
 
@@ -113,10 +123,4 @@ shuffle(deck);
 splitDeck(deck); 
 
 
- let player1Card = player1.deck.shift()
-
-let player2Card = player2.deck.shift()
-
-
-cardsInPlay = [player1Card, player2Card]
 
